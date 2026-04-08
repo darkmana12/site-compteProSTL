@@ -26,7 +26,7 @@ export function Navbar() {
           <Link href="/contact">Contactez-moi</Link>
         </li>
         <li>
-          <Link href="/compte">Compte</Link>
+          <Link href="/mes-achats">Mes achats</Link>
         </li>
       </ul>
       <div className="nav-right">

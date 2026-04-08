@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 import { getStripe } from "@/lib/stripe";
+import { recordPaidOrderFromCheckoutSession } from "@/lib/record-paid-order";
 
 export const runtime = "nodejs";
 
@@ -33,7 +34,15 @@ export async function POST(request: NextRequest) {
 
   if (event.type === "checkout.session.completed") {
     const session = event.data.object as Stripe.Checkout.Session;
-    console.log("[webhook] checkout.session.completed", session.id);
+    try {
+      await recordPaidOrderFromCheckoutSession(session.id);
+    } catch (e) {
+      console.error("[webhook] enregistrement commande", e);
+      return NextResponse.json(
+        { error: "Erreur persistance commande." },
+        { status: 500 }
+      );
+    }
   }
 
   return NextResponse.json({ received: true });

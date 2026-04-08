@@ -1659,3 +1659,141 @@ a.cart-line-img {
     justify-content: center;
   }
 }
+
+/* ─── MES ACHATS (lien magique) ─── */
+.magic-link-form {
+  max-width: 520px;
+}
+
+.magic-link-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--brown-mid);
+}
+
+.magic-link-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.magic-link-input {
+  flex: 1;
+  min-width: 200px;
+  padding: 12px 14px;
+  border: 1px solid var(--sand3);
+  border-radius: var(--radius-md);
+  background: var(--white);
+  font-size: 16px;
+}
+
+.magic-link-input:focus {
+  outline: none;
+  border-color: var(--terra);
+  box-shadow: 0 0 0 3px var(--terra-xlight);
+}
+
+.magic-link-msg {
+  margin-top: 16px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.mes-achats-banner {
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  margin-bottom: 1.5rem;
+  font-size: 15px;
+}
+
+.mes-achats-banner--warn {
+  background: #fff8e6;
+  border: 1px solid #e8d48a;
+  color: var(--brown);
+}
+
+.mes-achats-banner--ok {
+  background: var(--terra-xlight);
+  border: 1px solid var(--terra-light);
+  color: var(--brown);
+}
+
+.mes-achats-logout {
+  margin-bottom: 1.5rem;
+}
+
+.mes-achats-order-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.mes-achats-order-card {
+  border: 1px solid var(--sand3);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.5rem;
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+}
+
+.mes-achats-order-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.mes-achats-order-date {
+  font-weight: 600;
+  color: var(--brown);
+}
+
+.mes-achats-order-total {
+  font-family: var(--font-dm-serif), serif;
+  font-size: 1.25rem;
+  color: var(--terra);
+}
+
+.mes-achats-order-id {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 1rem;
+  word-break: break-all;
+}
+
+.mes-achats-lines {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mes-achats-lines li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-top: 1px solid var(--sand2);
+}
+
+.mes-achats-lines li:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.mes-achats-dl {
+  font-size: 14px;
+  padding: 8px 16px;
+}
+
+.mes-achats-missing {
+  font-size: 13px;
+  color: var(--muted);
+}
