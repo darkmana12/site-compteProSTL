@@ -1,0 +1,37 @@
+[
+  {
+    "id": "fantasy",
+    "slug": "fantasy",
+    "name": "Fantasy",
+    "count": 84,
+    "image": "https://images.unsplash.com/photo-1686059480658-3535942c5634?w=500&q=80"
+  },
+  {
+    "id": "scifi",
+    "slug": "sci-fi",
+    "name": "Sci-Fi",
+    "count": 52,
+    "image": "https://images.unsplash.com/photo-1760446411816-f5484549fb51?w=500&q=80"
+  },
+  {
+    "id": "dark",
+    "slug": "horreur-dark",
+    "name": "Horreur & Dark",
+    "count": 37,
+    "image": "https://images.unsplash.com/photo-1772121034449-e4bace4ca1d5?w=500&q=80"
+  },
+  {
+    "id": "animaux",
+    "slug": "animaux-creatures",
+    "name": "Animaux & Créatures",
+    "count": 68,
+    "image": "https://images.unsplash.com/photo-1772121034472-de4d2977bdbb?w=500&q=80"
+  },
+  {
+    "id": "deco",
+    "slug": "decoration",
+    "name": "Décoration",
+    "count": 24,
+    "image": "https://images.unsplash.com/photo-1772452858547-12e8781eaf27?w=500&q=80"
+  }
+]
