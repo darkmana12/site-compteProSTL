@@ -79,7 +79,10 @@ export function ProductCard({
       </div>
       <div className="product-info">
         <div className="product-cat">{catLine}</div>
-        <Link href={`/catalogue/${product.slug}`} className="block">
+        <Link
+          href={`/catalogue/${product.slug}`}
+          className="product-name-link block"
+        >
           <div className="product-name">{product.name}</div>
         </Link>
         {featured ? (

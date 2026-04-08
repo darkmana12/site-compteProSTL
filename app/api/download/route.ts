@@ -18,7 +18,7 @@ function getToken(request: NextRequest): string | null {
  * Redirige vers une URL GET présignée R2 (courte durée).
  * Protégé par R2_DOWNLOAD_SECRET jusqu’à branchement paiement / commande.
  *
- * Exemple : GET /api/download?slug=guerrier-elfique&token=VOTRE_SECRET
+ * Exemple : GET /api/download?slug=femme-enchainee&token=VOTRE_SECRET
  */
 export async function GET(request: NextRequest) {
   const slug = request.nextUrl.searchParams.get("slug");

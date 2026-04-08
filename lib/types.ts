@@ -12,7 +12,10 @@ export type Product = {
   categoryId: string;
   badge: ProductBadge;
   featured: boolean;
+  /** Vignette catalogue / cartes + image par défaut sur la fiche */
   image: string;
+  /** Fiche produit : galerie (vignette en premier si reprise) */
+  gallery?: string[];
   /** Clé objet dans le bucket R2 (ex. products/dragon-pack.zip), renseignée en production */
   r2Key?: string;
 };

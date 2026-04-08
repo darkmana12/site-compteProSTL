@@ -9,6 +9,7 @@ import {
   getProducts,
 } from "@/lib/products";
 import { AddToCartButton } from "@/components/AddToCartButton";
+import { ProductDetailGallery } from "@/components/ProductDetailGallery";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -52,16 +53,23 @@ export default async function ProductPage({ params }: Props) {
       </div>
       <div className="container">
         <div className="product-detail">
-          <div className="product-detail-gallery relative">
-            <Image
-              src={product.image}
-              alt={product.name}
-              fill
-              sizes="(max-width: 900px) 100vw, 45vw"
-              className="object-cover"
-              priority
+          {product.gallery && product.gallery.length > 0 ? (
+            <ProductDetailGallery
+              images={product.gallery}
+              productName={product.name}
             />
-          </div>
+          ) : (
+            <div className="product-detail-gallery relative">
+              <Image
+                src={product.image}
+                alt={product.name}
+                fill
+                sizes="(max-width: 900px) 100vw, 45vw"
+                className="object-cover"
+                priority
+              />
+            </div>
+          )}
           <div className="product-detail-info">
             <p className="product-cat" style={{ marginBottom: "0.5rem" }}>
               {cat?.name ?? "Modèle STL"} · {product.format}
@@ -81,9 +89,7 @@ export default async function ProductPage({ params }: Props) {
                 lineHeight: 1.6,
               }}
             >
-              Téléchargement : après validation du paiement (Stripe ou
-              PayPal), un lien signé sera généré depuis notre stockage sécurisé
-              (Cloudflare R2).
+              Téléchargement : après validation du paiement (Stripe ou PayPal).
             </p>
           </div>
         </div>

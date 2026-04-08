@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ClearCartOnSuccess } from "@/components/ClearCartOnSuccess";
 import { getSignedDownloadsForCheckoutSession } from "@/lib/order-downloads";
 
 export const metadata: Metadata = {
@@ -56,6 +57,7 @@ export default async function CommandeSuccessPage({ searchParams }: Props) {
 
   return (
     <>
+      <ClearCartOnSuccess />
       <div className="page-hero">
         <div className="container">
           <p className="tag-muted">Commande</p>

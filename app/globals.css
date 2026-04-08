@@ -89,10 +89,18 @@ main.page-main {
   padding: 0;
 }
 
+.nav-item-mes-achats {
+  padding-left: 1.1rem;
+  margin-left: 3rem;
+  border-left: 1px solid rgba(23, 107, 96, 0.28);
+}
+
 .nav-links a {
   text-decoration: none;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--brown-mid);
   transition: color 0.2s;
   position: relative;
@@ -357,7 +365,7 @@ main.page-main {
 
 .hero-title em {
   color: var(--terra);
-  font-style: italic;
+  font-style: normal;
 }
 
 .hero-sub {
@@ -863,12 +871,30 @@ a.product-card {
   margin-bottom: 6px;
 }
 
+/* Lien titre : jamais souligné ; feedback au survol / focus */
+a.product-name-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+a.product-name-link:hover .product-name,
+a.product-name-link:focus-visible .product-name {
+  color: var(--terra);
+}
+
+a.product-name-link:focus-visible {
+  outline: 2px solid var(--terra);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
 .product-name {
   font-size: 14px;
   font-weight: 600;
   color: var(--brown);
   margin-bottom: 4px;
   line-height: 1.4;
+  transition: color 0.2s ease;
 }
 
 .product-card.featured .product-name {
@@ -1180,6 +1206,13 @@ a.product-card {
   align-items: start;
 }
 
+.product-detail-gallery-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+}
+
 .product-detail-gallery {
   position: relative;
   border-radius: var(--radius-lg);
@@ -1191,6 +1224,38 @@ a.product-card {
 .product-detail-gallery img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+}
+
+.product-detail-thumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.product-detail-thumb {
+  padding: 0;
+  border: 2px solid transparent;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  cursor: pointer;
+  background: var(--sand2);
+  line-height: 0;
+  transition: border-color 0.2s;
+}
+
+.product-detail-thumb:hover {
+  border-color: rgba(23, 107, 96, 0.35);
+}
+
+.product-detail-thumb.is-active {
+  border-color: var(--terra);
+}
+
+.product-detail-thumb img {
+  display: block;
+  width: 88px;
+  height: 88px;
   object-fit: cover;
 }
 
